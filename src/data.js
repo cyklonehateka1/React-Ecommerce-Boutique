@@ -41,3 +41,38 @@ export const categories = [
     title: "LIGHT JACKETS",
   },
 ];
+
+export const popularProducts = [
+  {
+    id: 1,
+    img: "https://media.missguided.com/s/missguided/DD928119_set/1/blue-satin-drape-asymmetric-strap-midi-dress",
+  },
+  {
+    id: 2,
+    img: "https://media.missguided.com/s/missguided/DD928119_set/1/blue-satin-drape-asymmetric-strap-midi-dress",
+  },
+  {
+    id: 3,
+    img: "https://media.missguided.com/s/missguided/DD928119_set/1/blue-satin-drape-asymmetric-strap-midi-dress",
+  },
+  {
+    id: 4,
+    img: "https://media.missguided.com/s/missguided/DD928119_set/1/blue-satin-drape-asymmetric-strap-midi-dress",
+  },
+  {
+    id: 5,
+    img: "https://media.missguided.com/s/missguided/DD928119_set/1/blue-satin-drape-asymmetric-strap-midi-dress",
+  },
+  {
+    id: 6,
+    img: "https://media.missguided.com/s/missguided/DD928119_set/1/blue-satin-drape-asymmetric-strap-midi-dress",
+  },
+  {
+    id: 7,
+    img: "https://media.missguided.com/s/missguided/DD928119_set/1/blue-satin-drape-asymmetric-strap-midi-dress",
+  },
+  {
+    id: 8,
+    img: "https://media.missguided.com/s/missguided/DD928119_set/1/blue-satin-drape-asymmetric-strap-midi-dress",
+  },
+];
