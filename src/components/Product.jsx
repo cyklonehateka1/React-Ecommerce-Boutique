@@ -3,13 +3,27 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
-const Container = styled.div`f`;
+const Container = styled.div`
+  flex: 1;
+  margin: 5px;
+  min-width: 280px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5fbfd;
+`;
 
 const Circle = styled.div`
-f
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
 `;
 const Image = styled.img`
-f
+  height: 75%;
+  z-index: 2;
 `;
 const Info = styled.div`
 f
@@ -17,7 +31,7 @@ f
 
 const Icon = styled.div``;
 
-const Product = (item) => {
+const Product = ({ item }) => {
   return (
     <Container>
       <Circle />
