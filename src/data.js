@@ -23,3 +23,21 @@ const sliderItems = [
 ];
 
 export default sliderItems;
+
+export const categories = [
+  {
+    id: 1,
+    img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg",
+    title: "SHIRT STYLE",
+  },
+  {
+    id: 2,
+    img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg",
+    title: "LOUNGEWEAR LOVE",
+  },
+  {
+    id: 3,
+    img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg",
+    title: "LIGHT JACKETS",
+  },
+];
