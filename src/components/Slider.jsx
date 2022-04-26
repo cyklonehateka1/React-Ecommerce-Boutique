@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import { useState } from "react";
+import sliderItems from "../data";
 
 const Container = styled.div`
   width: 100%;
@@ -84,42 +85,18 @@ const Slider = () => {
         <ArrowLeftOutlinedIcon />
       </Arrow>
       <Wrapper>
-        <Slide bg="f5fafd">
-          <ImgContainer>
-            <Image src="https://media.glamour.com/photos/6092be09c8261f53e866edbd/master/w_1600,h_2148,c_limit/summer%20dresses.jpeg" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>SUMMER SALE</Title>
-            <Desc>
-              DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS
-            </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="f5fafd">
-          <ImgContainer>
-            <Image src="https://media.glamour.com/photos/6092be09c8261f53e866edbd/master/w_1600,h_2148,c_limit/summer%20dresses.jpeg" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>WINTER SALE</Title>
-            <Desc>
-              DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS
-            </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="f5fafd">
-          <ImgContainer>
-            <Image src="https://media.glamour.com/photos/6092be09c8261f53e866edbd/master/w_1600,h_2148,c_limit/summer%20dresses.jpeg" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>POPULAR SALE</Title>
-            <Desc>
-              DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS
-            </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Desc>{item.desc}</Desc>
+              <Button>SHOP NOW</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlinedIcon />
