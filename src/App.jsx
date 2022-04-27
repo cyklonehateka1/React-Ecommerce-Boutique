@@ -1,7 +1,7 @@
-import ProductList from "./pages/ProductList";
+import Product from "./pages/Product";
 
 function App() {
-  return <ProductList />;
+  return <Product />;
 }
 
 export default App;
