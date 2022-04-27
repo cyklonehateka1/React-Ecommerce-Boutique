@@ -3,6 +3,8 @@ import Anouncement from "../components/Anouncement";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
 
 const Container = styled.div``;
 
@@ -61,11 +63,24 @@ const FilterColor = styled.div`
   height: 20px;
   border-radius: 50%;
   background-color: ${(props) => props.color};
+  margin: 0 5px;
+  cursor: pointer;
 `;
 
-const FilterSize = styled.select``;
+const FilterSize = styled.select`
+  margin-left: 10px;
+  padding: 5px;
+`;
 
 const FilterSizeOption = styled.option``;
+
+const AddContainer = styled.div``;
+
+const AmountContainer = styled.div``;
+
+const Amount = styled.span``;
+
+const Button = styled.button``;
 
 const Product = () => {
   return (
@@ -104,10 +119,17 @@ const Product = () => {
                 <FilterSizeOption>M</FilterSizeOption>
                 <FilterSizeOption>L</FilterSizeOption>
                 <FilterSizeOption>XL</FilterSizeOption>
-                <FilterSizeOption>XS</FilterSizeOption>
               </FilterSize>
             </Filter>
           </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <RemoveIcon />
+              <Amount>1</Amount>
+              <AddIcon />
+            </AmountContainer>
+            <Button>ADD TO CART</Button>
+          </AddContainer>
         </InfoContainer>
       </Wrapper>
       <Newsletter />
