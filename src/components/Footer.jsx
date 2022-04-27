@@ -24,13 +24,30 @@ const SocialContainer = styled.div`
   display: flex;
 `;
 const SocialIcon = styled.div`
-d
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: #${(props) => props.color};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
 `;
 const Center = styled.div`
   flex: 1;
+  padding: 20px;
 `;
+
+const Title = styled.h3``;
+
+const List = styled.ul``;
+
+const ListItem = styled.li``;
+
 const Right = styled.div`
   flex: 1;
+  padding: 20px;
 `;
 const Footer = () => {
   return (
@@ -43,21 +60,35 @@ const Footer = () => {
           ipsum ipsa, ex minima fuga et ab fugit quaerat eligendi qui beatae.
         </Desc>
         <SocialContainer>
-          <SocialIcon>
+          <SocialIcon color="3B5999">
             <FacebookIcon />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="E4405F">
             <InstagramIcon />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="55ACEE">
             <TwitterIcon />
           </SocialIcon>
-          <SocialIcon>
+          <SocialIcon color="E60023">
             <PinterestIcon />
           </SocialIcon>
         </SocialContainer>
       </Left>
-      <Center></Center>
+      <Center>
+        <Title>Usefull Links</Title>
+        <List>
+          <ListItem>Home</ListItem>
+          <ListItem>Cart</ListItem>
+          <ListItem>Man Fashion</ListItem>
+          <ListItem>Woman Fashion</ListItem>
+          <ListItem>Accessories</ListItem>
+          <ListItem>My Account</ListItem>
+          <ListItem>Order Tracking</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Terms</ListItem>
+        </List>
+      </Center>
       <Right></Right>
     </Container>
   );
