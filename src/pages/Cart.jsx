@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Anouncement from "../components/Anouncement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
 
 const Container = styled.div``;
 
@@ -52,21 +54,63 @@ const Product = styled.div`
   justify-content: space-between;
 `;
 
-const ProductDetail = styled.div``;
+const ProductDetail = styled.div`
+  flex: 2;
+  display: flex;
+`;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 200px;
+`;
 
-const Details = styled.div``;
+const Details = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
 
 const ProductName = styled.span``;
 
 const ProductId = styled.span``;
 
-const ProductColor = styled.div``;
+const ProductColor = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: ${(props) => props.color};
+`;
 
 const ProductSize = styled.span``;
 
-const PriceDetail = styled.div``;
+const PriceDetail = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ProductAmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+const ProductAmount = styled.div`
+  font-size: 24px;
+  margin: 5px;
+`;
+
+const ProductPrice = styled.div`
+  font-size: 30px;
+  font-weight: 200;
+`;
+
+const Hr = styled.hr`
+  background-color: #eee;
+  border: none;
+  height: 1px;
+`;
 
 const Summary = styled.div`
   flex: 1;
@@ -94,21 +138,60 @@ const Cart = () => {
                 <Image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
                 <Details>
                   <ProductName>
-                    <b>Product:</b>JESSIE THUNDER SHOES
+                    <b>Product: </b>JESSIE THUNDER SHOES
                   </ProductName>
                   <ProductId>
-                    <b>ID:</b>934285702485
+                    <b>ID: </b>934285702485
                   </ProductId>
-                  <ProductColor />
+                  <ProductColor color="black" />
                   <ProductSize>
-                    <b>Size</b>37.5
+                    <b>Size: </b>37.5
                   </ProductSize>
                 </Details>
               </ProductDetail>
-              <PriceDetail>Price</PriceDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <AddIcon />
+                  <ProductAmount>2</ProductAmount>
+                  <RemoveIcon />
+                </ProductAmountContainer>
+                <ProductPrice>$30</ProductPrice>
+              </PriceDetail>
+            </Product>
+            <Hr />
+            <Product>
+              <ProductDetail>
+                <Image src="https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png" />
+                <Details>
+                  <ProductName>
+                    <b>Product: </b>HAKURA T-SHIRT
+                  </ProductName>
+                  <ProductId>
+                    <b>ID: </b>934285645643
+                  </ProductId>
+                  <ProductColor color="gray" />
+                  <ProductSize>
+                    <b>Size: </b>M
+                  </ProductSize>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <AddIcon />
+                  <ProductAmount>2</ProductAmount>
+                  <RemoveIcon />
+                </ProductAmountContainer>
+                <ProductPrice>$20</ProductPrice>
+              </PriceDetail>
             </Product>
           </Info>
-          <Summary>Summary</Summary>
+          <Summary>
+            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+            <SummaryItem>
+              <SummaryItemText>Subtotal</SummaryItemText>
+              <SummaryItemText>$50</SummaryItemText>
+            </SummaryItem>
+          </Summary>
         </Bottom>
       </Wrapper>
       <Footer />
