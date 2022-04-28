@@ -114,7 +114,21 @@ const Hr = styled.hr`
 
 const Summary = styled.div`
   flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
 `;
+
+const SummaryTitle = styled.h1``;
+
+const SummaryItem = styled.div``;
+
+const SummaryItemText = styled.span``;
+
+const SummaryItemPrice = styled.span``;
+
+const Button = styled.button``;
 
 const Cart = () => {
   return (
@@ -181,7 +195,7 @@ const Cart = () => {
                   <ProductAmount>2</ProductAmount>
                   <RemoveIcon />
                 </ProductAmountContainer>
-                <ProductPrice>$20</ProductPrice>
+                <ProductPrice>$ 20</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>
@@ -189,8 +203,21 @@ const Cart = () => {
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemText>$50</SummaryItemText>
+              <SummaryItemPrice>$ 50</SummaryItemPrice>
             </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Estimated Shipping</SummaryItemText>
+              <SummaryItemPrice>$ 5.80</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Shipping Discount</SummaryItemText>
+              <SummaryItemPrice>$ -5.80</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText type="total"> Total</SummaryItemText>
+              <SummaryItemPrice>$50</SummaryItemPrice>
+            </SummaryItem>
+            <Button>CHECKOUT NOW</Button>
           </Summary>
         </Bottom>
       </Wrapper>
