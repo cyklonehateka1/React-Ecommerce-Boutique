@@ -3,10 +3,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Badge } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
-  ${mobile({ height: "50px" })}
+  background-color: rgb(1, 180, 180);
+  color: white;
+  ${mobile({ height: "50px" })};
 `;
 
 const Wrapper = styled.div`
@@ -50,6 +53,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  color: black;
   ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
@@ -79,14 +83,34 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>HATEKA</Logo>
+          <Logo>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              HATEKA
+            </Link>
+          </Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>
+            <Link
+              to="/register"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              REGISTER
+            </Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="login" style={{ color: "white", textDecoration: "none" }}>
+              SIGN IN
+            </Link>
+          </MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlinedIcon color="action" />
+              <Link to="cart">
+                <ShoppingCartOutlinedIcon
+                  color="action"
+                  style={{ color: " white" }}
+                />
+              </Link>
             </Badge>
           </MenuItem>
         </Right>
